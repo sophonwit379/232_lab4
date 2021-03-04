@@ -1,4 +1,4 @@
-
+#include<stdio.h>
 int main()
 {
     int a,b,c,d,e,f,max=0,min=1000,x,z;
@@ -25,5 +25,4 @@ int main()
         }
     }
     printf("%d %d",x+1,z+1);
-
 }
