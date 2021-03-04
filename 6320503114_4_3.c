@@ -12,8 +12,4 @@ int main()
             printf("%c",word[i]);
     }
 
-
-
-
-
 }
