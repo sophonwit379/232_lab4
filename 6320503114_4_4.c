@@ -4,10 +4,10 @@
 int main()
 {
     int i=0;
-    char sen[1000],s[2]=" ";
+    char sen[1000];
     char *tmp;
     gets(sen);
-    tmp=strtok(sen,s);
+    tmp=strtok(sen," ");
     while(tmp!=NULL)
     {
         if(i==0)
@@ -23,11 +23,8 @@ int main()
                 printf("%c",toupper(tmp[0]));
             }
         }
-        tmp=strtok(NULL,s);
-        i++;
+        i=1;
+        tmp=strtok(NULL," ");
     }
-
-
-
 
 }
