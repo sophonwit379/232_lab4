@@ -5,9 +5,8 @@ int main()
 {
     int i=0;
     char sen[1000];
-    char *tmp;
-    gets(sen);
-    tmp=strtok(sen," ");
+    scanf("%[^\n]",sen);
+    char* tmp=strtok(sen," ");
     while(tmp!=NULL)
     {
         if(i==0)
