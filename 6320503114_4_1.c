@@ -1,28 +1,29 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,d,e,f,max=0,min=1000,x,z;
+    int a,b,c,max=0,min=1000,s1,s2;
     scanf("%d",&a);
-    int A[a][3],B[a-2];
+    int n1[a][3],n2[a-2];
     for(b=0; b<a; b++)
     {
-        scanf("%d %d %d",&A[b][0],&A[b][1],&A[b][2]);
+        scanf("%d %d %d",&n1[b][0],&n1[b][1],&n1[b][2]);
     }
     for(c=0; c<a-2; c++)
     {
-        B[c]=A[c][0]*4+A[c][1]*2+A[c][2]
-             +A[c+1][0]*4+A[c+1][1]*2+A[c+1][2]
-             +A[c+2][0]*4+A[c+2][1]*2+A[c+2][2];
-        if(B[c]>max)
+        n2[c]=n1[c][0]*4+n1[c][1]*2+n1[c][2]
+             +n1[c+1][0]*4+n1[c+1][1]*2+n1[c+1][2]
+             +n1[c+2][0]*4+n1[c+2][1]*2+n1[c+2][2];
+        if(n2[c]>max)
         {
-            max=B[c];
-            x=c;
+            max=n2[c];
+            s1=c;
         }
-        if(B[c]<min)
+        if(n2[c]<min)
         {
-            min=B[c];
-            z=c;
+            min=n2[c];
+            s2=c;
         }
     }
-    printf("%d %d",x+1,z+1);
+    printf("%d %d",s1+1,s2+1);
+
 }
